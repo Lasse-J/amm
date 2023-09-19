@@ -32,6 +32,15 @@ contract AMM {
 		uint256 timestamp		
 	);
 
+	event RemoveLiquidity(
+		address user,
+		address token1Get,
+		uint256 token1GetShares,
+		address token2Get,
+		uint256 token2GetShares,
+		uint256 timestamp
+	);
+
 	constructor(Token _token1, Token _token2) {
 		token1 = _token1;
 		token2 = _token2;
@@ -220,5 +229,14 @@ contract AMM {
 
 		// Homework: Emit an Event
 
+		// Emit an Event
+		emit RemoveLiquidity(
+			msg.sender,
+			address(token1),
+			_share,
+			address(token2),
+			_share,
+			block.timestamp
+		);
 	}
 }
