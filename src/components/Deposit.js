@@ -1,11 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { ethers } from 'ethers'
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Spinner from 'react-bootstrap/Spinner';
@@ -60,7 +58,6 @@ const Deposit = () => {
 
     setShowAlert(false)
     
-    console.log("deposit handler...")
     const _token1Amount = ethers.utils.parseUnits(token1Amount, 'ether')
     const _token2Amount = ethers.utils.parseUnits(token2Amount, 'ether')
 
