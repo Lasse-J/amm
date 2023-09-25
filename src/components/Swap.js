@@ -126,9 +126,9 @@ const Swap = () => {
                 <Form.Text muted>
                   Balance: {
                     inputToken === symbols[0] ? (
-                      balances[0]
+                      Math.round(balances[0] * 100) / 100
                     ) : inputToken === symbols[1] ? (
-                      balances[1]
+                      Math.round(balances[1] * 100) / 100
                     ) : 0
                   }
                 </Form.Text>
@@ -158,9 +158,9 @@ const Swap = () => {
                 <Form.Text muted>
                   Balance: {
                     outputToken === symbols[0] ? (
-                      balances[0]
+                      Math.round(balances[0] * 100) / 100
                     ) : outputToken === symbols[1] ? (
-                      balances[1]
+                      Math.round(balances[1] * 100) / 100
                     ) : 0
                   }
                 </Form.Text>
@@ -189,7 +189,7 @@ const Swap = () => {
                 <Button type='submit'>Swap</Button>
               )}
               <Form.Text muted>
-                Exchange Rate: {price}
+                Exchange Rate: {Math.round(price * 100000) / 100000}
               </Form.Text>
             </Row>
 

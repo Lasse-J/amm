@@ -82,7 +82,7 @@ const Deposit = () => {
 
             <Row>
               <Form.Text className='text-end my-2' muted>
-                Balance: {balances[0]}
+                Balance: {Math.round(balances[0] * 100) / 100}
               </Form.Text>
               <InputGroup>
                 <Form.Control
@@ -102,7 +102,7 @@ const Deposit = () => {
 
             <Row className='my-3'>
                 <Form.Text className='text-end my-2' muted>
-                  Balance: {balances[1]}
+                  Balance: {Math.round(balances[1] * 100) / 100}
                 </Form.Text>
               <InputGroup>
                 <Form.Control

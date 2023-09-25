@@ -61,7 +61,7 @@ const Withdraw = () => {
 
             <Row>
               <Form.Text className='text-end my-2' muted>
-                Shares: {shares}
+                Shares: {Math.round(shares * 100) / 100}
               </Form.Text>
               <InputGroup>
                 <Form.Control
@@ -90,8 +90,8 @@ const Withdraw = () => {
             <hr />
 
             <Row>
-              <p><strong>LASSE Balance:</strong> {balances[0]}</p>
-              <p><strong>USD Balance:</strong> {balances[1]}</p>
+              <p><strong>LASSE Balance:</strong> {Math.round(balances[0] * 100) / 100}</p>
+              <p><strong>USD Balance:</strong> {Math.round(balances[1] * 100) / 100}</p>
             </Row>
 
           </Form>

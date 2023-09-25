@@ -34,7 +34,6 @@ import AMM_ABI from '../abis/AMM.json';
 import config from '../config.json';
 
 
-
 export const loadProvider = (dispatch) => {
   const provider = new ethers.providers.Web3Provider(window.ethereum)
   dispatch(setProvider(provider))
